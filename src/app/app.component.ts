@@ -6,8 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  password = '';
+  // OR
+  // constructor() {
+  //   this.password = '';
+  // }
+
   //methods:
   onButtonClick() {
-    console.log('Button clicked');
+    // console.log('Button clicked');
+    this.password = 'My Password';
   }
 }
