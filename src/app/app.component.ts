@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  length = 0;
   includeLetters = false;
   includeNumbers = false;
   includeSymbols = false;
@@ -16,7 +17,13 @@ export class AppComponent {
   // }
 
   //methods:
+  onChangeLength(value: string) {
+    const parsedValue = Number(value);
 
+    if (!isNaN(parsedValue)) {
+      this.length = parsedValue;
+    }
+  }
   onChangeUseLetters() {
     this.includeLetters = !this.includeLetters;
   }
