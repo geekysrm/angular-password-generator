@@ -6,15 +6,27 @@
 
 <div>
   <label>Use Letters</label>
-  <input type="checkbox" />
+  <input
+    [checked]="includeLetters"
+    (change)="onChangeUseLetters()"
+    type="checkbox"
+  />
 </div>
 <div>
   <label>Use Numbers</label>
-  <input type="checkbox" />
+  <input
+    [checked]="includeNumbers"
+    (change)="onChangeUseNumbers()"
+    type="checkbox"
+  />
 </div>
 <div>
   <label>Use Symbols</label>
-  <input type="checkbox" />
+  <input
+    [checked]="includeSymbols"
+    (change)="onChangeUseSymbols()"
+    type="checkbox"
+  />
 </div>
 
 <div>
@@ -26,5 +38,4 @@
   <!-- Property Binding: Here "value" is a property of the input -->
   <input [value]="password" />
 </div>
-<!-- Interpolation -->
-{{ password }}
+<!-- Interpolation {{ password }} -->

@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  includeLetters = false;
+  includeNumbers = false;
+  includeSymbols = false;
   password = '';
   // OR
   // constructor() {
@@ -13,8 +16,18 @@ export class AppComponent {
   // }
 
   //methods:
+
+  onChangeUseLetters() {
+    this.includeLetters = !this.includeLetters;
+  }
+  onChangeUseNumbers() {
+    this.includeNumbers = !this.includeNumbers;
+  }
+  onChangeUseSymbols() {
+    this.includeSymbols = !this.includeSymbols;
+  }
   onButtonClick() {
-    // console.log('Button clicked');
+    console.log(this);
     this.password = 'My Password';
   }
 }
