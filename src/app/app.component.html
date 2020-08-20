@@ -34,7 +34,14 @@
 
 <div>
   <!-- Event binding: Here "click" is an event of the button -->
-  <button (click)="onButtonClick()">Generate!</button>
+  <button
+    [disabled]="
+      !(length && (includeLetters || includeNumbers || includeSymbols))
+    "
+    (click)="onButtonClick()"
+  >
+    Generate!
+  </button>
 </div>
 <div>
   <label>Your Password</label>
