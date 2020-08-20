@@ -18,9 +18,13 @@
 </div>
 
 <div>
+  <!-- Event binding: Here "click" is an event of the button -->
   <button (click)="onButtonClick()">Generate!</button>
 </div>
 <div>
   <label>Your Password</label>
+  <!-- Property Binding: Here "value" is a property of the input -->
   <input [value]="password" />
 </div>
+<!-- Interpolation -->
+{{ password }}
