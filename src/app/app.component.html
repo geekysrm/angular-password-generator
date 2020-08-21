@@ -61,7 +61,8 @@
           Generate!
         </button>
       </div>
-      <div class="box">
+      <!-- Structural directive *ngIf used: -->
+      <div class="box" *ngIf="password">
         <label>Your Password</label>
         <!-- Property Binding: Here "value" is a property of the input -->
         <input class="input" [value]="password" />
